@@ -1,0 +1,12 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+
+        <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">Cancel</button>
+        <h2>
+            {{ title }}
+        </h2>
+        <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Save</button>
+        
+        <app-form-section></app-form-section>
+      </form>
+</div>
