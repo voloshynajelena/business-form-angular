@@ -1,1 +1,8 @@
-<p>form-item works!</p>
+<hr/>
+<p>{{data.type}}</p>
+<p>{{data.type === 'input' ? data.label: ""}}</p>
+<input *ngIf="data.type == 'currency'" 
+        type="text" 
+        ([ngModel])="data.value" 
+        />
+<p>{{data.value}}</p>

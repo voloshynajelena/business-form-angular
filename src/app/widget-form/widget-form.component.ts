@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-widget-form',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WidgetFormComponent implements OnInit {
 
+  
   constructor() { }
+  @Input() items;
 
   ngOnInit() {
+    console.log('items---->', this.items)
   }
+
 
 }
