@@ -11,6 +11,7 @@ export class FormGroupComponent implements OnInit {
   @Input() data;
 
   ngOnInit() {
+    console.log(this.data)
   }
 
 }

@@ -5,13 +5,10 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './widget.component.html',
   styleUrls: ['./widget.component.sass']
 })
-export class WidgetComponent implements OnInit {
+export class WidgetComponent {
 
   constructor() { }
   
   @Input() data;
-  
-  ngOnInit() {
-  }
 
 }

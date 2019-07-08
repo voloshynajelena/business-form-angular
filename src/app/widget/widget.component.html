@@ -1,4 +1,6 @@
-<div>
-    <app-widget-header [name]="data.name"></app-widget-header>
-    <app-widget-form [items]="data.items"></app-widget-form>
-</div>
+    <div *ngFor="let item of data.items">
+        <h6 class='text-success px-3 py-2 m-0 border-bottom'>{{item.header}}</h6>
+        <app-form-group [data] = "item.items"></app-form-group>
+    </div>
+
+    

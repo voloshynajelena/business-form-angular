@@ -1,1 +1,26 @@
-<app-form-item *ngFor="let item of data" [data]="item"></app-form-item>
+<div class="bg-white p-3">
+        <form >
+    <div  class="form-group" *ngFor="let item of data" >
+        <!-- <p>{{item.type === 'input' ? item.label: ""}}</p>
+        <input *ngIf="item.type == 'currency'" 
+                type="text" 
+                ([ngModel])="item.value" 
+                />
+        <p>{{item.value}}</p> -->
+
+
+
+        <label for="name">{{item.label}}</label>
+        <input type="text" class="form-control" id="itemValue"
+               required
+               [(ngModel)]="item.value" name="itemValue"
+               #itemValue="ngModel">
+        <!-- <div [hidden]="itemValue.valid || itemValue.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div> -->
+
+
+    </div>
+</form>
+</div>
