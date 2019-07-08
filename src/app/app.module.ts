@@ -8,6 +8,7 @@ import { MainComponent } from './main/main.component';
 import { StartComponent } from './start/start.component';
 import { WidgetComponent } from './widget/widget.component';
 import { FormGroupComponent } from './form-group/form-group.component';
+import { HttpClientModule, /* other http imports */ } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormGroupComponent } from './form-group/form-group.component';
   imports: [
     BrowserModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

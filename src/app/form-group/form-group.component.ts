@@ -9,9 +9,11 @@ export class FormGroupComponent implements OnInit {
 
   constructor() { }
   @Input() data;
-
+  @Input() column_count;
+  input_class_name: string;
+  
   ngOnInit() {
-    console.log(this.data)
+    this.input_class_name = `col-${12/(this.column_count||1)}`
   }
 
 }
