@@ -1,28 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
-import { StartComponent } from './start/start.component';
-import { WidgetComponent } from './widget/widget.component';
-import { FormGroupComponent } from './form-group/form-group.component';
-import { HttpClientModule, /* other http imports */ } from "@angular/common/http";
+import { PostComponent } from './components/post/post.component';
+import { PostFormComponent } from './components/post-form/post-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
-    StartComponent,
-    WidgetComponent,
-    FormGroupComponent
+    PostComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    NgbModule,
-    HttpClientModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule, 
+    MatFormFieldModule,
+    MatIconModule,
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

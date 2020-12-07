@@ -1,3 +1,11 @@
-<div class="d-flex justify-content-center align-items-center h-100">
-        <app-main></app-main>
+<div class="post-grid">
+    <div class="post-grid__col">
+        <app-post-form (onAdd)="updatePosts($event)"></app-post-form>
+    </div>
+    <div *ngFor="let post of posts" class="post-grid__col">
+        <app-post class="post-grid-item" [post]="post" (onRemove)="removePost($event)">
+            <div #info>я контент</div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error accusamus, aliquid incidunt beatae iste itaque sequi impedit? Rerum quasi velit enim facilis dolor suscipit. Obcaecati officiis assumenda numquam velit natus!
+        </app-post>
+    </div>
 </div>

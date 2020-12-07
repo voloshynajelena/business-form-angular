@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "task-angular-business-form": {
+    "angular-blog": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,19 +17,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/task-angular-business-form",
+            "outputPath": "dist/angular-blog",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/custom-theme.scss",
+              "src/styles.sass"
             ],
             "scripts": []
           },
@@ -46,7 +46,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -55,6 +54,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -63,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "task-angular-business-form:build"
+            "browserTarget": "angular-blog:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "task-angular-business-form:build:production"
+              "browserTarget": "angular-blog:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "task-angular-business-form:build"
+            "browserTarget": "angular-blog:build"
           }
         },
         "test": {
@@ -111,15 +115,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "task-angular-business-form:serve"
+            "devServerTarget": "angular-blog:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "task-angular-business-form:serve:production"
+              "devServerTarget": "angular-blog:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "task-angular-business-form"
+    }
+  },
+  "defaultProject": "angular-blog"
 }

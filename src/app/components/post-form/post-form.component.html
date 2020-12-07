@@ -1,0 +1,17 @@
+<div class="post-form">
+    <div class="post-form__item">
+        <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input matInput [(ngModel)]="title" #titleInput>
+        </mat-form-field>
+    </div>
+    <div class="post-form__item">
+        <mat-form-field appearance="outline">
+            <mat-label>Text</mat-label>
+            <textarea matInput [(ngModel)]="text"></textarea>
+        </mat-form-field>
+    </div>
+    <div class="post-form__item">
+        <button mat-flat-button color="primary" (click)="addPost()">Add post</button>
+    </div>
+</div>
